@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
+    <title>Patitas al Rescate</title>
     <!--
     
 TemplateMo 558 Klassy Cafe
@@ -180,37 +180,51 @@ https://templatemo.com/tm-558-klassy-cafe
                 <p>Encuentra a tu compañero ideal. Todos estos adorables perritos están buscando un hogar.</p>
             </div>
 
-            <!-- Título de la sección -->
-            <h1 class="section-title">En Adopción</h1>
+           <!-- Título de la sección -->
+<h1 class="section-title">En Adopción</h1>
 
-            <div class="adoption-gallery">
-                <!-- Tarjeta de mascota (repite este bloque para cada perro) -->
-                <div class="pet-card">
-                    <div class="pet-image">
-                        <img src="assets/images/perrito1.jpg" alt="">
-                    </div>
-                    <h3>Nombre del Perro</h3>
-                    <p>Descripción breve sobre el perro...</p>
-                </div>
+<div class="adoption-gallery">
+    <!-- Tarjeta de mascota (repite este bloque para cada perro) -->
+    <div class="pet-card">
+        <div class="pet-image">
+            <img src="assets/images/perrito1.jpg" alt="">
+        </div>
+        <h3>Nombre del Perro</h3>
+        <p>Descripción breve sobre el perro...</p>
+    </div>
 
-                <div class="pet-card">
-                    <div class="pet-image">
-                        <img src="assets/images/perrito1.jpg" alt="">
-                    </div>
-                    <h3>Nombre del Perro</h3>
-                    <p>Descripción breve sobre el perro...</p>
-                </div>
+    <div class="pet-card">
+        <div class="pet-image">
+            <img src="assets/images/perrito2.jpg" alt="">
+        </div>
+        <h3>Nombre del Perro</h3>
+        <p>Descripción breve sobre el perro...</p>
+    </div>
 
-                <div class="pet-card">
-                    <div class="pet-image">
-                        <img src="assets/images/perrito1.jpg" alt="">
-                    </div>
-                    <h3>Nombre del Perro</h3>
-                    <p>Descripción breve sobre el perro...</p>
-                </div>
-            </div>
+    <div class="pet-card">
+        <div class="pet-image">
+            <img src="assets/images/perrito3.webp" alt="">
+        </div>
+        <h3>Nombre del Perro</h3>
+        <p>Descripción breve sobre el perro...</p>
+    </div>
 
+    <div class="pet-card">
+        <div class="pet-image">
+            <img src="assets/images/perrito4.webp" alt="">
+        </div>
+        <h3>Nombre del Perro</h3>
+        <p>Descripción breve sobre el perro...</p>
+    </div>
 
+    <div class="pet-card">
+        <div class="pet-image">
+            <img src="assets/images/perrito5.jpg" alt="">
+        </div>
+        <h3>Nombre del Perro</h3>
+        <p>Descripción breve sobre el perro...</p>
+    </div>
+</div>
             <!-- ***** Menu Area Ends ***** -->
 
             <!-- ***** Chefs Area Starts ***** -->
@@ -304,7 +318,7 @@ https://templatemo.com/tm-558-klassy-cafe
     </div>
 </section>
 
- <!-- ***** Sección de Formulario***** -->
+<!-- ***** Sección de Formulario***** -->
 <section class="section" id="formulario">
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center min-vh-100">
@@ -340,6 +354,31 @@ https://templatemo.com/tm-558-klassy-cafe
         </div>
     </div>
 </section>
+
+<script>
+document.getElementById('contact').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe normalmente
+    
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        date: document.getElementById('date').value,
+        message: document.getElementById('message').value
+    };
+    
+    const jsonData = JSON.stringify(formData, null, 2);
+    
+    // Aquí puedes guardar el jsonData en algún lugar, por ejemplo, en localStorage
+    localStorage.setItem('voluntariadoFormData', jsonData);
+
+    console.log('Datos del formulario guardados en JSON:', jsonData);
+
+    // Puedes mostrar un mensaje de éxito o realizar alguna otra acción
+    alert('Formulario enviado exitosamente!');
+});
+</script>
+
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
@@ -377,6 +416,7 @@ https://templatemo.com/tm-558-klassy-cafe
     <!-- Bootstrap -->
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/formulario.js"></script>
 
     <!-- Plugins -->
     <script src="assets/js/owl-carousel.js"></script>
@@ -393,7 +433,6 @@ https://templatemo.com/tm-558-klassy-cafe
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
     <script>
-
         $(function () {
             var selectedClass = "";
             $("p").click(function () {
