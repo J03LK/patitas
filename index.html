@@ -324,25 +324,22 @@ https://templatemo.com/tm-558-klassy-cafe
         <div class="row justify-content-center align-items-center min-vh-100">
             <div class="col-12 col-md-8 col-lg-6">
                 <div class="contact-form">
-                    <form id="contact" action="" method="post">
+                    <form id="contact">
                         <div class="row">
                             <div class="col-12">
                                 <h4>Formulario de Voluntariado</h4>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input name="name" type="text" id="name" placeholder="Tu Nombre" required="">
+                                <input name="nombre" type="text" id="nombre" placeholder="Tu Nombre y apellido" required="">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input name="email" type="email" id="email" placeholder="Ingresa tu correo electrónico" required="">
+                                <input name="correo" type="email" id="correo" placeholder="Ingresa tu correo electrónico" required="">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input name="phone" type="tel" id="phone" placeholder="Número de teléfono" required="">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input name="date" type="text" id="date" placeholder="dd/mm/yyyy" required="">
+                                <input name="telefono" type="tel" id="telefono" placeholder="Número de teléfono">
                             </div>
                             <div class="col-12">
-                                <textarea name="message" rows="6" id="message" placeholder="Mensaje" required=""></textarea>
+                                <textarea name="mensaje" rows="6" id="mensaje" placeholder="Mensaje"></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" id="form-submit" class="main-button-icon">Enviar Formulario</button>
@@ -354,37 +351,12 @@ https://templatemo.com/tm-558-klassy-cafe
         </div>
     </div>
 </section>
-
-<script>
-document.getElementById('contact').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe normalmente
-    
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        date: document.getElementById('date').value,
-        message: document.getElementById('message').value
-    };
-    
-    const jsonData = JSON.stringify(formData, null, 2);
-    
-    // Aquí puedes guardar el jsonData en algún lugar, por ejemplo, en localStorage
-    localStorage.setItem('voluntariadoFormData', jsonData);
-
-    console.log('Datos del formulario guardados en JSON:', jsonData);
-
-    // Puedes mostrar un mensaje de éxito o realizar alguna otra acción
-    alert('Formulario enviado exitosamente!');
-});
-</script>
-
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-xs-12">
-                    <div class="right-text-content">
+                    <div class"right-text-content">
                         <ul class="social-icons">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -448,6 +420,8 @@ document.getElementById('contact').addEventListener('submit', function(event) {
         });
 
     </script>
+    <script src="app.js"></script>
+    <script src="scrip.js"></script>
 </body>
 
 </html>
